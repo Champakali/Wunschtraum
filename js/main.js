@@ -1,4 +1,5 @@
 var audioEl = $('audio')
+var logoEl = $('.logo')
 
 $('.mute').click(function(e) {
     e.preventDefault();
@@ -10,4 +11,11 @@ $('.mute').click(function(e) {
         audioEl.trigger('pause')
         $(this).addClass('muted')
     }
+})
+
+$('.play').click(function(e) {
+    var $this = $(this)
+    $this.hide()
+    audioEl.trigger('play')
+    logoEl.addClass('intro')
 })
